@@ -1,0 +1,9 @@
+body { margin: 33px; color: #333; background: #fffff; }
+h1 { font: 40px Georgia, "Trebuchet MS", Geneva, Helvetica, Verdana, sans-serif; color: #777}
+pre { margin: 3px 0; color: #777; font: 22px/30px "Courier New";	text-align: left; }
+a:link { text-decoration: none; color: #A8111A; }
+a:visited { text-decoration: none; color: #A8111A; }
+a:hover, a:active { text-decoration: underline; color: #040404; }
+pre img { display: inline; }
+img { display: none; }
+hr { margin: 10px 0; }

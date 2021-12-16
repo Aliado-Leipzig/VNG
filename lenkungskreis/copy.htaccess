@@ -1,0 +1,40 @@
+#<MITTWALD HTACCESS_USER>
+# PLEASE DO NEVER CHANGE THE CODE INSIDE THE <MITTWALD> MARKERS.
+# VERAENDERN SIE BITTE NIEMALS DEN INHALT ZWISCHEN DEN <MITTWALD> MARKERN.
+
+
+
+AuthType Basic
+AuthName "Lenkungskreis Interna"
+AuthUserFile /home/www/p464960/html/lenkungskreis/.htpasswd.mittwald
+order deny,allow
+allow from all
+require valid-user
+#</MITTWALD HTACCESS_USER>
+
+# ENABLE DIRECTORY
+Options +Indexes
+
+# SET INDEX OPTIONS 
+IndexOptions IgnoreCase FancyIndexing FoldersFirst SuppressHTMLPreamble SuppressDescription NameWidth=*
+
+# IGNORE THESE FILES
+IndexIgnore .. .htaccess .ftpquota favicon.ico folder.png doc.png _00a.html _00b.html _000.css cgi-bin
+
+# SET DISPLAY ORDER
+IndexOrderDefault Descending Name
+
+# SPECIFY HEADER FILE
+HeaderName _00a.html
+
+# SPECIFY FOOTER FILE
+ReadmeName _00b.html
+
+# FOLDER DESCRIPTIONS
+AddDescription "<span class='description'>Private Directory</span>" transfer
+
+# SPECIFY CUSTOM ICONS
+AddIcon doc.png .txt .pdf .zip .mp3 .rar .mpg .indd .psd .tar .tif .html .htm .css .doc .log .js .ico, .eml
+AddIcon folder.png ^^DIRECTORY^^
+AddIcon icon-image.png .jpg .jpeg .jpe .JPG .png .gif
+AddIcon doc.png *.
