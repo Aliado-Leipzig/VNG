@@ -1,0 +1,56 @@
+/* Video Wrapper */
+
+.video_wrapper {
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 3px 5px #333;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.video_wrapper .video_trigger {
+    padding: 10px 30px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(235, 232, 230, .5);
+    color: black;
+    .button-container {
+        color: #f7f7f7 !important;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+        padding: 14px 20px;
+        font-size: 14px;
+        display: inline-block;
+        background-color: #ffc200;
+        &:hover {
+            background-color: #ffc200;
+            color: black;
+            transition: all .2s ease-in-out;
+            .button-inner {
+                color: black;
+            }
+        }
+        .button-inner {
+            -webkit-appearance: none;
+            border: none;
+            color: #f7f7f7;
+            background-color: inherit;
+        }
+    }
+}
+
+.video_wrapper .video_layer {
+    position: relative;
+    display: none;
+    height: inherit;
+    width: inherit;
+    margin: auto;
+}
+
+.video_wrapper .video_layer iframe {
+    border: 0px none transparent;
+    height: inherit;
+    width: inherit;
+}
