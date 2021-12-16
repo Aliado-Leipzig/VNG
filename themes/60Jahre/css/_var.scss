@@ -1,0 +1,114 @@
+$bp-desktop: 1190px;
+$bp-large: 1500px;
+$bp-tablet: 991px;
+$bp-mobile: 767px;
+$bp-small: 600px;
+$colorYellow: #ffc734;
+$colorGrey: #737373;
+$colorGreen: #51ae32;
+@mixin vendor-prefixes($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    @include vendor-prefixes(border-radius, $radius);
+}
+
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+    @include vendor-prefixes(box-shadow, $shadow);
+}
+
+@mixin transition($trans) {
+    transition: $trans;
+    @include vendor-prefixes(transition, $trans);
+}
+
+@mixin transform($transf) {
+    transform: $transf;
+    @include vendor-prefixes(transform, $transf);
+}
+
+@mixin animation($name, $time, $fill, $func, $delay, $dir, $count) {
+    @include vendor-prefixes(animation, $name $time);
+    @include vendor-prefixes(animation-fill-mode, $fill);
+    @include vendor-prefixes(animation-timing-function, $func);
+    @include vendor-prefixes(animation-delay, $delay);
+    @include vendor-prefixes(animation-direction, $dir);
+    @include vendor-prefixes(animation-iteration-count, $count);
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@include keyframes(scroll) {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 8px;
+    }
+}
+
+@font-face {
+    font-family: 'MetaWebPro-Bold';
+    src: url('../fonts/MetaWebPro-Bold.eot') format('eot'), url('../fonts/MetaWebPro-Bold.woff') format('woff'), url('../fonts/MetaWebPro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MetaScWebPro-Bold';
+    src: url('../fonts/MetaScWebPro-Bold.eot') format('eot'), url('../fonts/MetaScWebPro-Bold.woff') format('woff'), url('../fonts/MetaScWebPro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MetaWebPro-BoldIta';
+    src: url('../fonts/MetaWebPro-BoldIta.eot') format('eot'), url('../fonts/MetaWebPro-BoldIta.woff') format('woff'), url('../fonts/MetaWebPro-BoldIta.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MetaWebPro-Normal';
+    src: url('../fonts/MetaWebPro-Normal.eot') format('eot'), url('../fonts/MetaWebPro-Normal.woff') format('woff'), url('../fonts/MetaWebPro-Normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MetaWebPro-NormalIta';
+    src: url('../fonts/MetaWebPro-NormalIta.eot') format('eot'), url('../fonts/MetaWebPro-NormalIta.woff') format('woff'), url('../fonts/MetaWebPro-NormalIta.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@for $i from 1 through 10 {
+    ol {
+        li {
+            &:nth-of-type(#{$i}) {
+                &::before {
+                    content: "#{$i}";
+                }
+            }
+        }
+    }
+}
