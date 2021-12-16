@@ -1,0 +1,90 @@
+$bp-desktop: 1190px;
+$bp-large: 1500px;
+$bp-tablet: 991px;
+$bp-mobile: 767px;
+$bp-small: 600px;
+$colorYellow: #ffcc00;
+$colorGreen: #51ae32;
+$colorGrey: #737373;
+@mixin vendor-prefixes($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    @include vendor-prefixes(border-radius, $radius);
+}
+
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+    @include vendor-prefixes(box-shadow, $shadow);
+}
+
+@mixin transition($trans) {
+    transition: $trans;
+    @include vendor-prefixes(transition, $trans);
+}
+
+@mixin transform($transf) {
+    transform: $transf;
+    @include vendor-prefixes(transform, $transf);
+}
+
+@mixin animation($name, $time, $fill, $func, $delay, $dir, $count) {
+    @include vendor-prefixes(animation, $name $time);
+    @include vendor-prefixes(animation-fill-mode, $fill);
+    @include vendor-prefixes(animation-timing-function, $func);
+    @include vendor-prefixes(animation-delay, $delay);
+    @include vendor-prefixes(animation-direction, $dir);
+    @include vendor-prefixes(animation-iteration-count, $count);
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@include keyframes(scroll) {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 8px;
+    }
+}
+
+@for $i from 1 through 10 {
+    ol {
+        li {
+            &:nth-of-type(#{$i}) {
+                &::before {
+                    content: "#{$i}";
+                }
+            }
+        }
+    }
+}
+
+@include keyframes(scaling) {
+    from {
+        background-size: 100%;
+        opacity: .3;
+    }
+    to {
+        background-size: 120%;
+        opacity: 1;
+    }
+}
