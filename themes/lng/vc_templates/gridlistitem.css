@@ -1,0 +1,80 @@
+.gridlistitem {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+}
+.gridlistitem a {
+    width: 100%;
+    display: block;
+    position: relative;
+    min-height: 300px;
+    color: black;
+}
+@media screen and (min-width: 460px) {
+    .gridlistitem a {
+        min-height: 350px;
+    }
+}
+@media screen and (min-width: 580px) {
+    .gridlistitem a {
+        min-height: 400px;
+    }
+}
+@media screen and (min-width: 650px) {
+    .gridlistitem a {
+        min-height: 450px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .gridlistitem a {
+        min-height: 350px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .gridlistitem a {
+        min-height: 400px;
+    }
+}
+.gridlistitem a:hover .gridlistitem-image {
+    opacity: 0;
+    transform: translateX(-50%) scale(1.1);
+}
+.gridlistitem a:hover .gridlistitem-image-hover {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1);
+}
+.gridlistitem .gridlistitem-image,
+.gridlistitem .gridlistitem-image-hover {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+    .gridlistitem .gridlistitem-image,
+    .gridlistitem .gridlistitem-image-hover {
+        width: calc(100% - 3rem);
+        left: 1.25rem;
+        transform: translateX(0);
+    }
+    .gridlistitem a:hover .gridlistitem-image,
+    .gridlistitem a:hover .gridlistitem-image-hover {
+        transform: scale(1.1);
+    }
+}
+
+.gridlistitem .gridlistitem-image-hover {
+    opacity: 0;
+}
+
+.gridlistitem .gridlistitem-title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+    width: 100%;
+    text-align: center;
+}

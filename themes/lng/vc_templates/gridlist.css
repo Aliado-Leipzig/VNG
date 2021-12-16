@@ -1,0 +1,11 @@
+.gridlist {
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 5%;
+    row-gap: 3rem;
+}
+@media screen and (min-width: 768px) {
+    .gridlist {
+        grid-template-columns: 30% 30% 30%;
+    }
+}
