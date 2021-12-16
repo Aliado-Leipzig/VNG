@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: http://www.fontshop.com
+*/
+
+@font-face {
+    font-family: "OfficinaSansITC W07 Bold";
+    src: url("./fonts/1529257/79209bd7-d1a2-4b23-af8f-cfe1e95199da.woff2") format("woff2"), url("Fonts/1529257/b422b051-41d8-49be-b329-aeaa08b5cb4d.woff") format("woff");
+}
+
+@font-face {
+    font-family: "OfficinaSansITC W07 Book";
+    src: url("./fonts/1529261/28b75f42-dfa9-4f46-9a99-36fe4ced5966.woff2") format("woff2"), url("Fonts/1529261/15cbf306-b767-450e-9480-43369f74cbc8.woff") format("woff");
+}

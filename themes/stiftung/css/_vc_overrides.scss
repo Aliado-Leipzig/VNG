@@ -1,0 +1,79 @@
+.alignnone {
+    margin: 0;
+}
+
+.vc_row:not(.vc_inner) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 35px;
+    padding-right: 35px;
+    @media(min-width: 1920px) {
+        padding-left: 333px;
+        padding-right: 333px;
+    }
+}
+
+.vc_column-inner {
+    padding-top: 0 !important;
+}
+
+.container {
+    max-width: none;
+    padding: 0;
+}
+
+.vc_btn3-style-modern {
+    font-size: 18px !important;
+<<<<<<< HEAD
+    font-family: 'OfficinaSansITC W07 Bold' !important;
+=======
+    font-weight: bold !important;
+>>>>>>> 46b139dc8345d814304fce5dc4fbf9d0f4ff0271
+    padding: 12px 25px !important;
+    color: $font-color !important;
+}
+
+.vc_btn3-style-custom {
+    background: transparent;
+    background-image: none !important;
+    text-decoration: none !important;
+    font-size: 20px !important;
+<<<<<<< HEAD
+    font-family: 'OfficinaSansITC W07 Bold';
+=======
+    font-weight: bold;
+>>>>>>> 46b139dc8345d814304fce5dc4fbf9d0f4ff0271
+    padding: 0 !important;
+}
+
+.vc_btn3-color-transparent {
+    background: transparent !important;
+    background-image: none !important;
+    &.text-white {
+        color: white !important;
+        border-color: white !important;
+    }
+    &.text-grey {
+        color: $font-color !important;
+        border-color: $font-color !important;
+    }
+}
+
+.vc_single_image-wrapper:after {
+    content: '';
+    height: 34px;
+    width: 34px;
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 22px;
+    background: url(../img/cross.svg);
+<<<<<<< HEAD
+}
+
+.vc_general.vc_btn3:focus,
+.vc_general.vc_btn3:hover {
+    border-color: inherit !important;
+=======
+>>>>>>> 46b139dc8345d814304fce5dc4fbf9d0f4ff0271
+}

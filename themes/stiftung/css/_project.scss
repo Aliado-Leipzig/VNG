@@ -1,0 +1,42 @@
+.project {
+    h1 {
+        font-size: 36px;
+<<<<<<< HEAD
+        font-family: 'OfficinaSansITC W07 Bold';
+=======
+        font-weight: bold;
+>>>>>>> 46b139dc8345d814304fce5dc4fbf9d0f4ff0271
+        margin-top: 35px;
+    }
+    h2 {
+        font-size: 60px;
+        font-weight: normal;
+        line-height: 70px;
+    }
+    .project-header {
+        margin-bottom: 60px !important;
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .actions {
+        margin-bottom: 225px;
+    }
+    a {
+        text-decoration: underline;
+    }
+    .next-project-button {
+        a {
+            border: 1px solid $font-color !important;
+        }
+    }
+    .next-project-section {
+        background: $font-color;
+        padding: 40px 0 90px 0;
+        a {
+            font-size: 60px;
+            line-height: 70px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

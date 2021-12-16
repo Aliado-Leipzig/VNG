@@ -1,0 +1,20 @@
+$font-color: #585757;
+$shadow-color:#d2d7d9;
+$grey: #E8E5E5;
+$yellow: #FCD503;
+@mixin vendor-prefixes($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+}
+
+@mixin transition($trans) {
+    transition: $trans;
+    @include vendor-prefixes(transition, $trans);
+}
+
+@mixin transform($transf) {
+    transform: $transf;
+    @include vendor-prefixes(transform, $transf);
+}
