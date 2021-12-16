@@ -1,0 +1,207 @@
+.ctaArrow {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    z-index: 3;
+}
+
+.ctaArrow--part {
+    display: inline-block;
+    height: 16px;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+    width: 2px;
+}
+
+.ctaArrow-left {
+    transform: rotate(-45deg);
+}
+
+.ctaArrow-right {
+    transform: rotate(45deg);
+}
+
+.ctaArrow-Up {
+    .ctaArrow-left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .ctaArrow-right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+.ctaArrow-button {
+    bottom: 0;
+    height: 15px;
+    position: absolute;
+    right: -19px;
+    top: 0;
+    width: 16px;
+    .ctaArrow--part {
+        background: $red;
+        height: 13px;
+        margin: 0 1px;
+    }
+}
+
+.ctaArrow-buttonRight {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.newsletter-sidebar-archive-wrap {
+    background: $colorLightGrey;
+    margin: 0 0 50px 0;
+}
+
+.newsletter-sidebar-archive-title {
+    background: $colorLightGrey;
+    color: $red;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+    .ctaArrow-acc {
+        bottom: 0;
+        height: 15px;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 35px;
+        .ctaArrow--part {
+            background: $red;
+        }
+        .ctaArrow-right {
+            position: relative;
+            right: -4px;
+        }
+        .ctaArrow-left-vc {
+            left: -4px;
+            position: relative;
+        }
+    }
+    &.active {
+        background: $red;
+        color: #fff;
+        .ctaArrow-acc {
+            .ctaArrow--part {
+                background: #fff;
+            }
+        }
+    }
+}
+
+.newsletter-sidebar-archive-title,
+.newsletter-sidebar-archive-link {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.newsletter-sidebar-archive-link {
+    color: $red;
+    display: block;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+    &:hover {
+        background: $red;
+        color: #fff;
+    }
+}
+
+.newsletter-archive-post {
+    margin: 0 0 50px;
+}
+
+.newsletter-archivepage-title {
+    margin: 0 0 50px;
+}
+
+.newsletter-archive-title {
+    display: block;
+}
+
+.newsletter-archive-meta {
+    margin: 0 0 4px 0;
+}
+
+.newsletter-archive-button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+.newsletter-teaser {
+    border-top: 4px solid #efefef;
+    margin: 0 0 50px;
+    padding: 15px 0 0;
+    .newsletter-teaser-excerpt {
+        font-size: 11px;
+        font-weight: 600;
+    }
+}
+
+.newsletter-teaser-button {
+    .ctaArrow-button {
+        right: -22px;
+        width: 20px;
+        .ctaArrow--part {
+            margin: 0 3px;
+        }
+    }
+}
+
+.newsletter-archive-meta-tax {
+    font-weight: bold;
+}
+
+.wpb_text_column {
+    p {
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+
+.newsletter-editorial {
+    font-size: 12px;
+    margin: 0 0 50px;
+}
+
+.newsletter-sidebar-cta-wrap {
+    background: $colorLightGrey;
+    margin: 0 0 50px;
+    padding: 15px;
+    .newsletter-sidebar-cta-text {
+        padding-left: 0;
+    }
+}
+
+.newsletter-sidebar-cta-title {
+    color: $red;
+    margin-bottom: 15px;
+}
+
+.newsletter-sidebar-cta-text,
+.newsletter-sidebar-cta-link {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.newsletter-sidebar-cta-text {
+    padding-left: 0;
+}
+
+.newsletter-sidebar-cta-link {
+    background: $red;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    padding: 8px 40px 10px;
+}

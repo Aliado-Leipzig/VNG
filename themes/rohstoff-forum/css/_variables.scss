@@ -1,0 +1,62 @@
+//fonts
+$regular: DINW01-Light, Arial, sans-serif;
+$bold: DINW01-Bold, Arial, sans-serif;
+
+//Breakpoints min-width
+$bp_desktop: 1980px;
+$bp_laptop: 1024px;
+$bp_tablet_md: 992px;
+$bp_tablet: 768px;
+$bp_tablet_max-width: 767px;
+$bp_tablet_md_max-width: 991px;
+$bp_mobile: 425px;
+
+//COLORS
+$red: #a8111a;
+$font-red:#a9121c;
+$font-black: #444;
+
+$grey: #dadada;
+$darkgrey: #666;
+$colorLightGrey: #efefef;
+
+//Widths
+$wrapper-width-tablet: 90%;
+$wrapper-width-laptop: 87%;
+$wrapper-width-desktop: 70%;
+
+//paddings
+$padding-mobile: 5%;
+$padding-tablet_2x: #{100% - $wrapper-width-tablet};
+$padding-laptop_2x: #{100% - $wrapper-width-laptop};
+$padding-desktop_2x: #{100% - $wrapper-width-desktop};
+
+$padding-tablet: calc(#{$padding-tablet_2x} / 2);
+$padding-laptop: calc(#{$padding-laptop_2x} / 2);
+$padding-desktop: calc(#{$padding-desktop_2x} / 2);
+
+//skew
+$skew: -16deg;
+$unskew: 16deg;
+
+//animations
+$ani_speed: .5s;
+
+//mixins
+@mixin aspect-ratio($width, $height) {
+        position: relative;
+        &:before {
+                content: "";
+                display: block;
+                max-width: 768px;
+                padding-top: ($height / $width) * 100%;
+                width: 100%;
+        }
+        > .video {
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+        }
+}

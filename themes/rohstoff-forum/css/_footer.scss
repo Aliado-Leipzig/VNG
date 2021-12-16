@@ -1,0 +1,23 @@
+footer {
+    color: $grey;
+    margin-bottom: 15px;
+    &.cookie-banner-open {
+        padding-bottom: 80px;
+    }
+    a {
+        color: $darkgrey;
+    }
+    a:hover {
+        color: $font-red;
+    }
+    nav {
+        float: left;
+    }
+    .copyright {
+        float: right;
+        margin: 0;
+    }
+    .menu-item {
+        font-size: 14px;
+    }
+}

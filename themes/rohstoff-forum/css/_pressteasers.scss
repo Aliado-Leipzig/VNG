@@ -1,0 +1,95 @@
+.pressteasers-sidebar-archive-container {
+    background: $colorLightGrey;
+    margin: 0 0 50px 0;
+}
+
+.pressteasers-sidebar-archive-headline {
+    background: $colorLightGrey;
+    color: $red;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+    .ctaArrow-acc {
+        bottom: 0;
+        height: 15px;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 35px;
+        .ctaArrow--part {
+            background: $red;
+        }
+        .ctaArrow-right {
+            position: relative;
+            right: -4px;
+        }
+        .ctaArrow-left-vc {
+            left: -4px;
+            position: relative;
+        }
+    }
+    &.active {
+        background: $red;
+        color: #fff;
+        .ctaArrow-acc {
+            .ctaArrow--part {
+                background: #fff;
+            }
+        }
+    }
+}
+
+.pressteasers-sidebar-archive-headline,
+.pressteasers-sidebar-archive-link {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.pressteasers-sidebar-archive-link {
+    color: $red;
+    display: block;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+    &:hover {
+        background: $red;
+        color: #fff;
+    }
+}
+
+.pressrelease-wrapper {
+    margin-bottom: 50px;
+}
+
+.pressrelease-meta {
+    margin-bottom: 15px;
+}
+
+.pressrelease-read-more-button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    .ctaArrow-button .ctaArrow--part {
+        margin: 0 3px;
+    }
+}
+
+.pressrelease-overview-pagination-wrapper {
+    text-align: center;
+    margin-bottom: 100px;
+    .pagination-prev,
+    .pagination-next {
+        cursor: pointer;
+        color: $font-red;
+    }
+    .pagination-next {
+        margin-left: 5px;
+    }
+    .pagination-prev {
+        margin-right: 5px;
+    }
+}
