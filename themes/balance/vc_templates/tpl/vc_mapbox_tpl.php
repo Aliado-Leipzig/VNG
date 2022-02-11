@@ -19,14 +19,15 @@
                 <div class="wpb_wrapper">
                     <div id='map'></div>
                     <div class="map-teaser"
-                        style="background-image: url(/wp-content/themes/balance/img/mapbox-teaser.PNG);">
+                        style="background-image: url(/wp-content/themes/balance/img/balance/background-map.png); border-radius: 10px;">
                     </div>
                 </div>
             </div>
         </div>
         <div class="wpb_column vc_column_container vc_col-sm-pull-9 vc_col-sm-3">
             <div class="vc_column-inner">
-                <div class="wpb_wrapper">
+                <div class="wpb_wrapper map-mega-container">
+					<div class="map-button-mobile">Standort Auswählen</div>
                     <div class="location-list-container">
                         <?php echo wpb_js_remove_wpautop($content); ?>
                     </div>

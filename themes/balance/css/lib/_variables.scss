@@ -1,6 +1,7 @@
 //fonts
-$regular: MetaWebPro, Arial, sans-serif;
-$bold: MetaWebPro, Arial, sans-serif;
+$light: Fira Sans Light, sans-serif;
+$regular: Fira Sans Regular, sans-serif;
+$bold: Fira Sans Bold, sans-serif;
 
 //Breakpoints min-width
 $bp_desktop: 1980px;
@@ -16,34 +17,37 @@ $fontweightnormal: 400;
 $fontweightbolder: 600;
 $fontweightbold: 700;
 
-$accordeongreyborder: rgba(152,152,152,1);
+$accordeongreyborder: rgba(152, 152, 152, 1);
 
 //COLORS
 $bgyellow: rgba(252, 213, 3, 1);
 $bgred: rgba(198, 51, 73, 1);
-$bggrey: rgba(218,218,218,1);
-$bgwhite: rgba(255,255,255,1);
+$bggrey: rgba(218, 218, 218, 1);
+$bgwhite: rgba(255, 255, 255, 1);
 $bgyellowborder: rgba(252, 175, 3, 1);
 $colorparagraphyellowbox: rgba(88, 87, 87, 1);
-$bgheader: rgba(255,255,255,1);
-$bgheaderfixed: rgba(255,255,255,.8);
-$fillmapgrey: rgba(178,178,178,1);
+$bgheader: rgba(255, 255, 255, 1);
+$bgheaderfixed: rgba(255, 255, 255, 0.8);
+$fillmapgrey: rgba(178, 178, 178, 1);
 
 $bgygrey: rgba(232, 229, 229, 1);
 $footerbackground: rgba(232, 229, 229, 1);
 
 //FONTS
-$colormenulinks: rgba(0,0,0,1);
+$colormenulinks: rgba(0, 0, 0, 1);
 $sizemenulinks: 1.3rem;
 $sizemenufooterlinks: 1.1rem;
 
-$fontsize_h1: 2.5rem;
+$fontsize_h1: 80px;
+$fontsize_h1_laptop: 50px;
 $fontsize_h1_mobile: 1.7rem;
 
-$fontsize_h2: 2rem;
+$fontsize_h2: 70px;
+$fontsize_h2_laptop: 40px;
 $fontsize_h2_mobile: 1.3rem;
 
-$fontsize_h3: 1.375rem;
+$fontsize_h3: 44px;
+$fontsize_h3_laptop: 34px;
 $fontsize_h3_mobile: 1.3rem;
 
 $fontsize_h4: 1.125rem;
@@ -63,7 +67,7 @@ $fontsize_referenz_h2_mobile: 1rem;
 
 $fontsize_kontakt: 1.7rem;
 
-$colorfontwhite: rgba(255,255,255,1);
+$colorfontwhite: rgba(255, 255, 255, 1);
 $colorfont: rgba(0, 0, 0, 1);
 
 $sizeh1: 2.2rem;
@@ -73,14 +77,14 @@ $sizeh2: 1.375rem;
 $lineheighth2: 1.375rem;
 
 $sizeh3: 1.175rem;
-$lineheighth3:1.175rem;
+$lineheighth3: 1.175rem;
 
-$fontcolorwhite: rgba(255,255,255,1);
+$fontcolorwhite: rgba(255, 255, 255, 1);
 $fontcoloryellow: rgba(252, 213, 3, 1);
 $fontcolordarkgrey: rgba(41, 41, 41, 1);
 
 $red: #a8111a;
-$font-red:#a9121c;
+$font-red: #a9121c;
 $font-black: #444;
 
 $grey: #dadada;
@@ -105,172 +109,248 @@ $skew: -16deg;
 $unskew: 16deg;
 
 //animations
-$ani_speed: .5s;
+$ani_speed: 0.5s;
 
 //mixins
 
 @mixin vendor-prefixes($property, $value) {
-	-webkit-#{$property}: $value;
-	-moz-#{$property}: $value;
-	-ms-#{$property}: $value;
-	-o-#{$property}: $value;
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
 }
 
-@mixin transform($transf){
-	transform: $transf;
-	@include vendor-prefixes(transform, $transf);
+@mixin transform($transf) {
+  transform: $transf;
+  @include vendor-prefixes(transform, $transf);
 }
 @mixin animation($name, $time, $fill, $func, $delay, $dir, $count) {
-	-webkit-animation: $name $time;
-	animation: $name $time;
-	-webkit-animation-fill-mode: $fill;
-	animation-fill-mode: $fill;
-	animation-timing-function: $func;
-	-webkit-animation-timing-function: $func;
-	animation-delay: $delay;
-	-webkit-animation-delay: $delay;
-	animation-direction: $dir;
-	-webkit-animation-direction: $dir;
-	animation-iteration-count: $count;
-	-webkit-animation-iteration-count: $count;
+  -webkit-animation: $name $time;
+  animation: $name $time;
+  -webkit-animation-fill-mode: $fill;
+  animation-fill-mode: $fill;
+  animation-timing-function: $func;
+  -webkit-animation-timing-function: $func;
+  animation-delay: $delay;
+  -webkit-animation-delay: $delay;
+  animation-direction: $dir;
+  -webkit-animation-direction: $dir;
+  animation-iteration-count: $count;
+  -webkit-animation-iteration-count: $count;
 }
 @mixin keyframes($animation-name) {
-	@-webkit-keyframes #{$animation-name} {
-		@content;
-	}
-	@keyframes #{$animation-name} {
-		@content;
-	}
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
 }
 @mixin animation($name, $time, $fill, $func, $delay, $dir, $count) {
-	@include vendor-prefixes(animation, $name $time);
-	@include vendor-prefixes(animation-fill-mode, $fill);
-	@include vendor-prefixes(animation-timing-function, $func);
-	@include vendor-prefixes(animation-delay, $delay);
-	@include vendor-prefixes(animation-direction, $dir);
-	@include vendor-prefixes(animation-iteration-count, $count);
+  @include vendor-prefixes(animation, $name $time);
+  @include vendor-prefixes(animation-fill-mode, $fill);
+  @include vendor-prefixes(animation-timing-function, $func);
+  @include vendor-prefixes(animation-delay, $delay);
+  @include vendor-prefixes(animation-direction, $dir);
+  @include vendor-prefixes(animation-iteration-count, $count);
 }
 @mixin keyframes($animation-name) {
-	@-webkit-keyframes #{$animation-name} {
-		@content;
-	}
-	@keyframes #{$animation-name} {
-		@content;
-	}
-	@-moz-keyframes #{$animation-name} {
-		@content;
-	}
-	@-ms-keyframes #{$animation-name} {
-		@content;
-	}
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
 }
 @include keyframes(mapItem) {
-	0% {
-		@include transform(scale(0));
-		opacity: 0;
-		left:-101px;
-		bottom:-75px;
-	}
-	100% {
-		opacity: 1;
-		left:-11px;
-		bottom:-11px;
-		@include transform(scale(1));
-	}
+  0% {
+    @include transform(scale(0));
+    opacity: 0;
+    left: -101px;
+    bottom: -75px;
+  }
+  100% {
+    opacity: 1;
+    left: -11px;
+    bottom: -11px;
+    @include transform(scale(1));
+  }
 }
 @include keyframes(fadeIn) {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes bounce {
-	0%{ -moz-transform:scale(1);}
-	25%{ -moz-transform:scale(1);}
-	50%{ -moz-transform:scale(1);}
-	75%{ -moz-transform:scale(1.2);}
-	100%{ -moz-transform:scale(.6);}
+  0% {
+    -moz-transform: scale(1);
+  }
+  25% {
+    -moz-transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1);
+  }
+  75% {
+    -moz-transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(0.6);
+  }
 }
 
 @-webkit-keyframes bounce {
-	0%{ -webkit-transform:scale(1);}
-	50%{ -webkit-transform:scale(1);}
-	50%{ -webkit-transform:scale(1);}
-	75%{ -webkit-transform:scale(1.2);}
-	100%{ -webkit-transform:scale(.6);}
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+  }
 }
 
 @mixin vendor-prefixes($property, $value) {
-	-webkit-#{$property}: $value;
-	-moz-#{$property}: $value;
-	-ms-#{$property}: $value;
-	-o-#{$property}: $value;
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
 }
 
 @mixin border-radius($radius) {
-	border-radius: $radius;
-	@include vendor-prefixes(border-radius, $radius);
+  border-radius: $radius;
+  @include vendor-prefixes(border-radius, $radius);
 }
 
-@mixin box-shadow($shadow){
-	box-shadow: $shadow;
-	@include vendor-prefixes(box-shadow, $shadow);
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+  @include vendor-prefixes(box-shadow, $shadow);
 }
 
-@mixin transition($trans){
-	transition: $trans;
-	@include vendor-prefixes(transition, $trans);
+@mixin transition($trans) {
+  transition: $trans;
+  @include vendor-prefixes(transition, $trans);
 }
 
- @mixin rotate($degrees) {
-    transform: $rotate;
-	@include vendor-prefixes(transform, $rotate);
+@mixin rotate($degrees) {
+  transform: $rotate;
+  @include vendor-prefixes(transform, $rotate);
 }
 
 @mixin aspect-ratio($width, $height) {
-	position: relative;
-	&:before {
-		display: block;
-		content: "";
-		width: 100%;
-		max-width: 768px;
-		padding-top: ($height / $width) * 100%;
-	}
-	> .video {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    max-width: 768px;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
-@font-face{
-	font-family:"MetaWebPro";
-	src:url("fonts/MetaWebPro-Bold.eot?#iefix");
-	src:url("fonts/MetaWebPro-Bold.eot?#iefix") format("eot"),
-		url("fonts/MetaWebPro-Bold.woff") format("woff"),
-		url("fonts/MetaWebPro-Bold.ttf") format("truetype");
-	font-weight: 700;
-	font-style: normal;
+@font-face {
+  font-family: "Fira Sans Light";
+  src: url("fonts/fira-sans/light/c5811f446bb65539e4cff01e1227f3ab.eot"); /* IE9*/
+  src: url("fonts/fira-sans/light/c5811f446bb65539e4cff01e1227f3ab.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("fonts/fira-sans/light/c5811f446bb65539e4cff01e1227f3ab.woff2")
+      format("woff2"),
+    /* chrome、firefox */
+      url("fonts/fira-sans/light/c5811f446bb65539e4cff01e1227f3ab.woff")
+      format("woff"),
+    /* chrome、firefox */
+      url("fonts/fira-sans/light/c5811f446bb65539e4cff01e1227f3ab.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("fonts/fira-sans/light/c5811f446bb65539e4cff01e1227f3ab.svg#Fira Sans Light")
+      format("svg"); /* iOS 4.1- */
 }
-@font-face{
-	font-family:"MetaWebPro";
-	src:url("fonts/MetaWebPro-Normal.eot?#iefix");
-	src:url("fonts/MetaWebPro-Normal.eot?#iefix") format("eot"),
-		url("fonts/MetaWebPro-Normal.woff") format("woff"),
-		url("fonts/MetaWebPro-Normal.ttf") format("truetype");
-	font-weight: normal;
-	font-style: normal;
+
+@font-face {
+  font-family: "Fira Sans Regular";
+  src: url("fonts/fira-sans/regular/00947c360c800c60b7d6c7d098e370ff.eot"); /* IE9*/
+  src: url("fonts/fira-sans/regular/00947c360c800c60b7d6c7d098e370ff.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("fonts/fira-sans/regular/00947c360c800c60b7d6c7d098e370ff.woff2")
+      format("woff2"),
+    /* chrome、firefox */
+      url("fonts/fira-sans/regular/00947c360c800c60b7d6c7d098e370ff.woff")
+      format("woff"),
+    /* chrome、firefox */
+      url("fonts/fira-sans/regular/00947c360c800c60b7d6c7d098e370ff.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("fonts/fira-sans/regular/00947c360c800c60b7d6c7d098e370ff.svg#Fira Sans Regular")
+      format("svg"); /* iOS 4.1- */
 }
-@font-face{
-	font-family:"Icon";
-	src:
-		url("fonts/simplaro-webfont.woff2") format("woff2"),
-		url("fonts/simplaro-webfont.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
+
+@font-face {
+  font-family: "Fira Sans Bold";
+  src: url("fonts/fira-sans/bold/07ae8f9744ee8992f2d7e6adcad57e89.eot"); /* IE9*/
+  src: url("fonts/fira-sans/bold/07ae8f9744ee8992f2d7e6adcad57e89.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("fonts/fira-sans/bold/07ae8f9744ee8992f2d7e6adcad57e89.woff2")
+      format("woff2"),
+    /* chrome、firefox */
+      url("fonts/fira-sans/bold/07ae8f9744ee8992f2d7e6adcad57e89.woff")
+      format("woff"),
+    /* chrome、firefox */
+      url("fonts/fira-sans/bold/07ae8f9744ee8992f2d7e6adcad57e89.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("fonts/fira-sans/bold/07ae8f9744ee8992f2d7e6adcad57e89.svg#Fira Sans Bold")
+      format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+  font-family: "MetaWebPro";
+  src: url("fonts/MetaWebPro-Bold.eot?#iefix");
+  src: url("fonts/MetaWebPro-Bold.eot?#iefix") format("eot"),
+    url("fonts/MetaWebPro-Bold.woff") format("woff"),
+    url("fonts/MetaWebPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MetaWebPro";
+  src: url("fonts/MetaWebPro-Normal.eot?#iefix");
+  src: url("fonts/MetaWebPro-Normal.eot?#iefix") format("eot"),
+    url("fonts/MetaWebPro-Normal.woff") format("woff"),
+    url("fonts/MetaWebPro-Normal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Icon";
+  src: url("fonts/simplaro-webfont.woff2") format("woff2"),
+    url("fonts/simplaro-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
