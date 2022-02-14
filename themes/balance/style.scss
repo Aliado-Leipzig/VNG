@@ -1967,6 +1967,7 @@ footer {
       img {
         width: 100%;
         height: 100%;
+        border-radius: 0px 30px 0px 0px;
       }
     }
     .single-news-content {
@@ -2004,6 +2005,10 @@ footer {
           border-color: #afca0b !important;
           color: #ffffff !important;
           background-image: url(./img/balance/button-white-download.png) !important;
+        }
+
+        &.bal_download-pressebild {
+          margin-left: 25px;
         }
       }
     }
@@ -2126,6 +2131,11 @@ footer {
             color: #ffffff !important;
             background-image: url(./img/balance/button-white-download.png) !important;
           }
+
+          &.bal_download-pressebild {
+            margin-left: 0;
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -2172,6 +2182,7 @@ div.bal_aktuelles-grid {
           font-size: 30px;
           text-align: Left;
           font-weight: 600;
+          line-height: 40px;
         }
       }
 
@@ -2238,6 +2249,13 @@ div.bal_aktuelles-grid {
         font-size: 50px;
         font-family: "Fira Sans Light";
       }
+    }
+  }
+
+  .balance-background-circle-dots {
+    .vc_single_image-img {
+      width: 80%;
+      margin-left: 50vw;
     }
   }
 
@@ -3078,20 +3096,191 @@ div.bal_aktuelles-grid {
   }
 }
 
+/* Custom styles Product rows (Medano Solution) */
+.bal_produkte-section-right {
+  padding-top: 0px !important;
+  overflow: visible !important;
+  .bal_produkte-row-right {
+    & > .bal_produkte-image-column-right {
+      padding-right: 0px !important;
+    }
+    h1,
+    h2 {
+      font-family: "Fira Sans Light";
+    }
+  }
+}
+
+.bal_produkte-section-left {
+  padding-top: 0px !important;
+  overflow: visible !important;
+  .bal_produkte-row-left {
+    & > .bal_produkte-image-column-left {
+      padding-left: 0px !important;
+    }
+    h1,
+    h2 {
+      font-family: "Fira Sans Light";
+    }
+  }
+}
+
+@media (max-width: $bp_mobile) {
+  .bal_produkte-main-image {
+    img {
+      height: 318px !important;
+      object-fit: cover;
+      border-radius: 0 30px 0 0;
+    }
+  }
+  .bal_produkte-section-right {
+    .bal_produkte-row-right {
+      padding-left: 0px !important;
+      display: flex;
+      flex-direction: column-reverse;
+
+      .wpb_column {
+        padding: 0 20px;
+      }
+
+      & > .bal_produkte-image-column-right {
+        padding-right: 0px;
+
+        .balance-product-detail-image {
+          right: 48%;
+          top: -50px;
+        }
+      }
+    }
+  }
+
+  .bal_produkte-section-left {
+    .bal_produkte-row-left {
+      padding-right: 0px !important;
+
+      .wpb_column {
+        padding: 0 20px;
+      }
+
+      & > .bal_produkte-image-column-left {
+        padding-left: 0px;
+
+        .balance-product-detail-image {
+          right: 16%;
+          top: -50px;
+        }
+      }
+    }
+  }
+}
+
 /* Custom styles Product Card (Medano Solution) */
+
 .balance-card {
   border-radius: 0px 24px 0px 0px;
+  -webkit-border-radius: 0px 24px 0px 0px;
+  -moz-border-radius: 0px 24px 0px 0px;
+  -ms-border-radius: 0px 24px 0px 0px;
+  -o-border-radius: 0px 24px 0px 0px;
+
   min-height: 260px;
+
   @media (max-width: $bp_tablet) {
     display: none;
   }
-  &:hover {
-    .balance-card-main {
-      display: none;
-    }
-    .balance-card-hover {
-      display: block;
-    }
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect) */
+  .flip-card {
+    min-height: 260px;
+    background-color: transparent;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    min-height: 260px;
+
+    //Balance card styles.
+    padding-top: 50px !important;
+    padding-right: 20px !important;
+    padding-bottom: 50px !important;
+    padding-left: 20px !important;
+  }
+
+  .flip-card-front {
+    border-radius: 0px 24px 0px 0px;
+    -webkit-border-radius: 0px 24px 0px 0px;
+    -moz-border-radius: 0px 24px 0px 0px;
+    -ms-border-radius: 0px 24px 0px 0px;
+    -o-border-radius: 0px 24px 0px 0px;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    border-radius: 24px 0px 0px 0px;
+    -webkit-border-radius: 24px 0px 0px 0px;
+    -moz-border-radius: 24px 0px 0px 0px;
+    -ms-border-radius: 24px 0px 0px 0px;
+    -o-border-radius: 24px 0px 0px 0px;
+
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+  }
+}
+
+#balance-card-1 {
+  .flip-card-front,
+  .flip-card-back {
+    background-color: #7aa62c !important;
+  }
+}
+
+#balance-card-2 {
+  .flip-card-front,
+  .flip-card-back {
+    background-color: #afca0b !important;
+  }
+}
+
+#balance-card-3 {
+  .flip-card-front,
+  .flip-card-back {
+    background-color: #ffcc00 !important;
+  }
+}
+
+#balance-card-4 {
+  .flip-card-front,
+  .flip-card-back {
+    background-color: #ffe26d !important;
   }
 }
 
@@ -3123,8 +3312,6 @@ div.bal_aktuelles-grid {
   text-align: center;
   font-size: 30px;
   line-height: 80px;
-  display: none;
-  margin-top: -20px;
 }
 
 .balance-card-hover-bottom {

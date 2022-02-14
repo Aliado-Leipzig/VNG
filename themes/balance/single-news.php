@@ -57,16 +57,14 @@
 								<div class="single-news-content">
 									<?php the_content();?>
 								</div>
+								<?php if ( ! empty( $pdf = get_post_meta( get_the_ID(), 'pdf-news', true ) ) ): ?>
 								<div class="single-news-download balance-download vc_btn3-container vc_btn3-left">
-										<a class="bal_download-button vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-custom" target="_blank" href="<?php echo wp_get_attachment_url( $pdf ) ?>">
-										DOWNLOAD ARTIKEL<?php //echo strtoupper( get_the_title( $pdf ) ); ?></a>
-									</div>
-									<div class="single-news-download balance-download vc_btn3-container vc_btn3-left">
-									<a class="bal_download-button vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-custom" target="_blank" href="<?php echo wp_get_attachment_url( $img ) ?>">
-										DOWNLOAD PRESSEBILD<?php //echo strtoupper( get_the_title( $pdf ) ); ?></a>
-									</div>
-									<?php endif; ?>
-
+									<a class="bal_download-button bal_download-artikel vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-custom" target="_blank" href="<?php echo wp_get_attachment_url( $pdf ) ?>">
+									DOWNLOAD ARTIKEL<?php //echo strtoupper( get_the_title( $pdf ) ); ?></a>
+									<a class="bal_download-button bal_download-pressebild vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-round vc_btn3-style-custom" target="_blank" href="<?php echo wp_get_attachment_url( $img ) ?>">
+									DOWNLOAD PRESSEBILD<?php //echo strtoupper( get_the_title( $pdf ) ); ?></a>
+								</div>
+								<?php endif; ?>
 							</div>
                         </article>
                     </div>
